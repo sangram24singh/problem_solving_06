@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        background-color: cornflowerblue;
+        border: 12px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .box{
+        background-image: linear-gradient(orange, gold);
+        border: 3px solid black;
+        width: 450px;
+        height: 400px;
+        margin: 20px;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1 class="center">This is Problem Solving</h1>
+    <div class="main">
+        <div class="box"><h1>Find the Smaller Angle</h1><pre>var Minimal_Angle = (h, m) => 
+{
+       h=h%12;
+       let hour = (h*360)/12 + (m*360)/(12*60);
+       let min = (m*360)/60;
+       let angle = Math.abs(hour-min);
+       if (angle>180)
+       return 360 - angle;
+       else 
+       return angle;
+};</pre></div>
+<div class="box"><h1>Check whether the year is Leap year or not.</h1><pre>var Check_Leap = (year) => 
+    {
+     
+      if(year%400===0)
+      return "Leap Year";
+      
+      if(year%100===0)
+      return "Non Leap Year";
+      
+      if(year%4===0)
+      return "Leap Year";
+      
+      else
+      return "Non Leap Year";
+    
+    };
+    </pre></div>
+    <div class="box"><h1>Perfect Number Check.</h1><pre>var Perfect_Check = (N) => 
+        {
+           let ans=[];
+           let j=0;
+           for(let i=1; i < N; i++){
+             if(N % i ===0)
+             ans[j]= ans [j] + i;
+             
+           }
+           if( ans[j] === N )
+              return "YES";
+             else
+             return "NO";
+             
+             
+                
+        };</pre></div>
+        <div class="box"><h1>Reverse a Number</h1><pre>var Reverse_Number = (N) => 
+            {
+              let rem,rev=0;
+              while(N>0)
+              {
+                rem=N%10;
+                rev=rev*10+rem;
+                N=Math.floor(N/10);
+              }
+            
+            return rev;
+            };</pre></div>
+            <div class="box"><h1>Substring Check.</h1><pre>var Substring_Check = (S1, S2) => {
+                let str = S1.indexOf(S2);
+                if(str!==-1){
+                  return "YES";
+                }
+                else{
+                  return "NO";
+                }
+                   
+              };</pre></div>
+    </div>
+</body>
+</html>
